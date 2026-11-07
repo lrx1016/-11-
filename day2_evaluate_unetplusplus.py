@@ -19,7 +19,7 @@ DEVICE = torch.device(
 DATA_DIR = Path("data/CWFID")
 MASK_DIR = DATA_DIR / "masks"
 
-OUTPUT_DIR = Path("outputs/cwfid_unet")
+OUTPUT_DIR = Path("outputs/cwfid_unetplusplus")
 SPLIT_PATH = Path("outputs/experiment_split/split.json")
 
 # 注意：这里是 (高度, 宽度)
