@@ -3,4 +3,4 @@
 
 11.6 继上次unet的代码 这次更新了unet++的代码 用于对比unet效果，并加深unet的理解  
 11.7 更新了DeepLabv3+的代码 和Unet以及Unet++的分割效果对比略差 
-11.8 更新了FCN和PSPnet的代码 FCN效果没有Unet DeepLabv3效果好
+11.8 更新了FCN和PSPnet的代码 FCN效果没有Unet DeepLabv3效果好，PSPnet效果更差
