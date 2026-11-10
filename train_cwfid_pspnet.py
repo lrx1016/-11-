@@ -27,7 +27,7 @@ IMAGE_DIR = ROOT / "images"
 MASK_DIR = ROOT / "masks"
 
 OUTPUT_DIR = Path(
-    "outputs/cwfid_deeplabv3plus"
+    "outputs/cwfid_PSPnet"
 )
 
 OUTPUT_DIR.mkdir(
@@ -46,7 +46,7 @@ if torch.cuda.is_available():
     torch.cuda.manual_seed_all(SEED)
 
 print("================================")
-print("CWFID DeepLabV3+ 实验")
+print("CWFID PSPnet 实验")
 print("运行设备:", DEVICE)
 
 if torch.cuda.is_available():
@@ -243,19 +243,19 @@ print("验证批次数:", len(val_loader))
 
 
 # ==========================================
-# 5. 创建 deeplabv3+ 模型
+# 5. 创建 PSPnet 模型
 # ==========================================
 
-model = smp.DeepLabV3Plus(
+model = smp.PSPNet(
     encoder_name="resnet18",
     encoder_weights=None,
     in_channels=3,
     classes=1,
-    activation=None,
-    decoder_channels=256
+    activation=None
 ).to(DEVICE)
 
-print("DeepLabV3+ 创建成功！")
+print("PSPNet 创建成功！")
+
 total_params = sum(
     p.numel()
     for p in model.parameters()
@@ -614,7 +614,7 @@ axes[1].imshow(mask_show, cmap="gray")
 axes[1].set_title("Ground Truth")
 
 axes[2].imshow(prediction, cmap="gray")
-axes[2].set_title("DeepLabV3+ Prediction")
+axes[2].set_title("PSPnet Prediction")
 
 for ax in axes:
     ax.axis("off")

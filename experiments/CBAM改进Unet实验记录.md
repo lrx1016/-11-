@@ -2,7 +2,7 @@
 
 ## 一、实验目的
 
-在原始 U-Net 的基础上引入 CBAM（Convolutional Block Attention Module，卷积块注意力模块），研究注意力机制能否改善农业图像中的叶片分割效果。
+在原始 U-Net 的基础上引入 CBAM（Convolutional Block Attention Module，卷积块注意力模块），研究注意力机制能否改善农业图像中的叶片分割效果。gi
 
 本次实验主要完成：
 
